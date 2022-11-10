@@ -9,10 +9,10 @@ namespace RegistrationForm
 {
     public class User
     {
-        public string mName { get; set; }
-        public string mAge { get; set; }
-        public string mUserName { get; set; }
-        public string mPassword { get; set; }
+        private string mName { get; set; }
+        private string mAge { get; set; }
+        private string mUserName { get; set; }
+        private string mPassword { get; set; }
 
         protected List<User> mUsers = new List<User>();
 
