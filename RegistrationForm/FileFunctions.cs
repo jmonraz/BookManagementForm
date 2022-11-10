@@ -7,13 +7,19 @@ using System.IO;
 
 namespace RegistrationForm
 {
-    public class FileFunctions
+    public static class FileFunctions
     {
-        protected string mUsersFile = @".\users.txt";
+        static string mUsersFile = @".\users.txt";
         
-        public void WriteUser(User _user)
+        public static void LoadUsers()
         {
-            
+            // Will read the file and add users to the mUsers list in User class
+        }
+        public static bool WriteUsers(List<User> _users)
+        {
+            bool userExists = false;
+
+            return userExists;
         }
     }
 }

@@ -21,8 +21,19 @@ namespace RegistrationForm
         private void SaveButton_Click(object sender, EventArgs e)
         {
             User user = new User();
-            user.AddUser(NameTextbox.Text, AgeTextbox.Text, UsernameTextbox.Text, PasswordTextbox.Text);
             
+            List<User> users = user.AddUser(NameTextbox.Text, AgeTextbox.Text, UsernameTextbox.Text, PasswordTextbox.Text);
+
+            bool userExists = FileFunctions.WriteUsers(users);
+
+            if(userExists)
+            {
+                MessageBox.Show("User already exists");
+            }
+            else
+            {
+                MessageBox.Show("User successfully registered");
+            }
 
         }
     }
