@@ -13,7 +13,6 @@ namespace RegistrationForm
         
         public static void LoadUsers()
         {
-            User user = new User();
             string name = string.Empty;
             string age = string.Empty;
             string userName = string.Empty;
@@ -24,7 +23,7 @@ namespace RegistrationForm
                 StreamReader textLines = new StreamReader(mUsersFile);
                 string currLine;
 
-                if (user.mUsers.Count == 0)
+                if (User.mUsers.Count == 0)
                 {
                     int mod = 1;
                     
@@ -48,19 +47,28 @@ namespace RegistrationForm
                         else if (mod % 4 == 0)
                         {
                             password = currLine;
-                            user.AddUser(name, age, userName, password);
+                            User.AddUser(name, age, userName, password);
                             mod++;
                         }
                     }
                 }
+
+                textLines.Close();
             }
         }
-        public static bool WriteUser(User _user)
+        public static void WriteUser(User _user)
         {
-            bool userExists = false;
-
-            
-            return userExists;
+                using(StreamWriter w = File.AppendText(mUsersFile))
+                {
+                    for(int i = 0; i < 1; i++)
+                    {
+                        w.WriteLine(_user.mName);
+                        w.WriteLine(_user.mAge);
+                        w.WriteLine(_user.mUserName);
+                        w.WriteLine(_user.mPassword);
+                    }
+               }
+           
         }
     }
 }

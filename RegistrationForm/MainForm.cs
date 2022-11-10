@@ -12,7 +12,7 @@ namespace RegistrationForm
 {
     public partial class MyMainForm : Form
     {
-        
+        public User user = new User();
         public MyMainForm()
         {
             FileFunctions.LoadUsers();
