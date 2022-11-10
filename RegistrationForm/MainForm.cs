@@ -15,6 +15,7 @@ namespace RegistrationForm
         
         public MyMainForm()
         {
+            FileFunctions.LoadUsers();
             InitializeComponent();
         }
 

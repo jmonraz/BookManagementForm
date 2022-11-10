@@ -13,12 +13,53 @@ namespace RegistrationForm
         
         public static void LoadUsers()
         {
+            User user = new User();
+            string name = string.Empty;
+            string age = string.Empty;
+            string userName = string.Empty;
+            string password = string.Empty;
             // Will read the file and add users to the mUsers list in User class
+            if (File.Exists(mUsersFile))
+            {
+                StreamReader textLines = new StreamReader(mUsersFile);
+                string currLine;
+
+                if (user.mUsers.Count == 0)
+                {
+                    int mod = 1;
+                    
+                    while ((currLine = textLines.ReadLine()) != null)
+                    {
+                        if (mod % 4 == 1)
+                        {
+                            name = currLine;
+                            mod++;
+                        }
+                        else if (mod % 4 == 2)
+                        {
+                            age = currLine;
+                            mod++;
+                        }
+                        else if (mod % 4 == 3)
+                        {
+                            userName = currLine;
+                            mod++;
+                        }
+                        else if (mod % 4 == 0)
+                        {
+                            password = currLine;
+                            user.AddUser(name, age, userName, password);
+                            mod++;
+                        }
+                    }
+                }
+            }
         }
-        public static bool WriteUsers(List<User> _users)
+        public static bool WriteUser(User _user)
         {
             bool userExists = false;
 
+            
             return userExists;
         }
     }

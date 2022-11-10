@@ -14,9 +14,9 @@ namespace RegistrationForm
         private string mUserName { get; set; }
         private string mPassword { get; set; }
 
-        protected List<User> mUsers = new List<User>();
+        public List<User> mUsers = new List<User>();
 
-        public List<User> AddUser(string _name, string _age, string _userName, string _password)
+        public void AddUser(string _name, string _age, string _userName, string _password)
         {
             User user = new User();
 
@@ -26,8 +26,6 @@ namespace RegistrationForm
             user.mPassword = _password;
 
             mUsers.Add(user);
-
-            return mUsers;
         }
     }
 }

@@ -22,9 +22,9 @@ namespace RegistrationForm
         {
             User user = new User();
             
-            List<User> users = user.AddUser(NameTextbox.Text, AgeTextbox.Text, UsernameTextbox.Text, PasswordTextbox.Text);
+            user.AddUser(NameTextbox.Text, AgeTextbox.Text, UsernameTextbox.Text, PasswordTextbox.Text);
 
-            bool userExists = FileFunctions.WriteUsers(users);
+            bool userExists = FileFunctions.WriteUser(user);
 
             if(userExists)
             {
