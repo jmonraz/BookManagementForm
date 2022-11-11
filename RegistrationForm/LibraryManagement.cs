@@ -29,5 +29,22 @@ namespace RegistrationForm
 
             ab.ShowDialog();
         }
+
+        private void displayAllBooksToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DisplayBooks db = new DisplayBooks();
+
+            if (Book.mBooks.Count == 0)
+            {
+                MessageBox.Show("No books in library!");
+                db.Close();
+            }
+            else
+            {
+                db.ShowDialog();
+            }
+            
+            
+        }
     }
 }

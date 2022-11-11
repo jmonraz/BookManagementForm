@@ -53,6 +53,12 @@
       <DependentUpon>AddBook.cs</DependentUpon>
     </Compile>
     <Compile Include="Book.cs" />
+    <Compile Include="DisplayBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisplayBooks.Designer.cs">
+      <DependentUpon>DisplayBooks.cs</DependentUpon>
+    </Compile>
     <Compile Include="FileFunctions.cs" />
     <Compile Include="LibraryManagement.cs">
       <SubType>Form</SubType>
@@ -83,6 +89,9 @@
     <Compile Include="User.cs" />
     <EmbeddedResource Include="AddBook.resx">
       <DependentUpon>AddBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DisplayBooks.resx">
+      <DependentUpon>DisplayBooks.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LibraryManagement.resx">
       <DependentUpon>LibraryManagement.cs</DependentUpon>

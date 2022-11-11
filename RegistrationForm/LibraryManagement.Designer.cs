@@ -114,6 +114,7 @@
             this.displayAllBooksToolStripMenuItem.Name = "displayAllBooksToolStripMenuItem";
             this.displayAllBooksToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.displayAllBooksToolStripMenuItem.Text = "Display All Books";
+            this.displayAllBooksToolStripMenuItem.Click += new System.EventHandler(this.displayAllBooksToolStripMenuItem_Click);
             // 
             // searchToolStripMenuItem
             // 

@@ -33,5 +33,10 @@ namespace RegistrationForm
                 this.Close();
             }
         }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
