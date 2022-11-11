@@ -150,7 +150,8 @@
 	- Form closes automatically when creating new book
 	- Improved form visuality
 - Added Display books Form
-	- Added listbox with no functionality
-	- Added text message when the library is empty and closes the form</value>
+	- Added listbox with functionality to select an index from list and display book contents
+	- Added text message when the library is empty and closes the form
+	- Added textbox for title, author, genre, and number of pages</value>
   </data>
 </root>
