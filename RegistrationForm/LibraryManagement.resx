@@ -152,6 +152,17 @@
 - Added Display books Form
 	- Added listbox with functionality to select an index from list and display book contents
 	- Added text message when the library is empty and closes the form
-	- Added textbox for title, author, genre, and number of pages</value>
+	- Added textbox for title, author, genre, and number of pages
+- Added Edit Book Form
+	- Added textbox for title, author, genre, and pages
+	- Added Save button to update the fields
+	- Added Save button functionality to disable when no book exists
+	- Added text message to display text when a book is saved
+	- When Save button is pressed while book exists, the file flushes and updates with new book values from mBook list
+	- Added BookListForm
+		- Added Lookup button that displays all books in the list
+		- When list item is selected, member fields populate on the Edit Book Form textboxes
+		- Added button to close the form without selecting an item
+		- Added button to save selected item to a string accessible from Edit Book Form</value>
   </data>
 </root>
