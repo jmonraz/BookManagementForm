@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace RegistrationForm
 {
     public partial class MyMainForm : Form
     {
-        public User user = new User();
+        Thread th;
         public MyMainForm()
         {
             FileFunctions.LoadUsers();
@@ -21,9 +22,13 @@ namespace RegistrationForm
 
         private void RegistrationNavigationButton_Click(object sender, EventArgs e)
         {
+            this.Hide();
             MyRegistrationForm registrationForm = new MyRegistrationForm();
-            registrationForm.Show();
+            registrationForm.ShowDialog();
+            this.Close();
         }
+
+       
 
         private void LoginNavigationButton_Click(object sender, EventArgs e)
         {
