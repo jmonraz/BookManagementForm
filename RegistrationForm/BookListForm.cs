@@ -36,7 +36,7 @@ namespace RegistrationForm
         private void OKButton_Click(object sender, EventArgs e)
         {
             mTitle = BookListbox.SelectedItem.ToString();
-            this.Hide();
+            this.Close();
         }
     }
 }
