@@ -35,7 +35,20 @@ namespace RegistrationForm
                 FileFunctions.WriteUser(user);
                 MessageBox.Show("User successfully registered");
             }
+            this.Hide();
+            MyMainForm mf = new MyMainForm();
+            mf.ShowDialog();
+            this.Close();
 
+
+        }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MyMainForm mf = new MyMainForm();
+            mf.ShowDialog();
+            this.Close();
         }
     }
 }

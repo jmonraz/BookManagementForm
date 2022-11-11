@@ -21,14 +21,18 @@ namespace RegistrationForm
 
         private void RegistrationNavigationButton_Click(object sender, EventArgs e)
         {
+            this.Hide();
             MyRegistrationForm registrationForm = new MyRegistrationForm();
-            registrationForm.Show();
+            registrationForm.ShowDialog();
+            this.Close();
         }
 
         private void LoginNavigationButton_Click(object sender, EventArgs e)
         {
+            this.Hide();
             MyLoginForm loginForm = new MyLoginForm();
-            loginForm.Show();
+            loginForm.ShowDialog();
+            this.Close();
             
         }
     }

@@ -51,5 +51,21 @@ namespace RegistrationForm
 
             return user;
         }
+
+        public static User ReadUser(string _userName, string _password)
+        {
+            User user = new User();
+            for(int i = 0; i < mUsers.Count; i++)
+            {
+                if(_userName == mUsers[i].mUserName && _password == mUsers[i].mPassword)
+                {
+                    mUsers[i].mUserExists = true;
+                    return mUsers[i];
+                }
+            }
+
+            user.mUserExists = false;
+            return user;
+        }
     }
 }
