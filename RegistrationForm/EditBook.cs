@@ -77,5 +77,11 @@ namespace RegistrationForm
             }
             
         }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            blf.Close();
+            this.Close();
+        }
     }
 }

@@ -109,6 +109,7 @@
             this.deleteBookToolStripMenuItem.Name = "deleteBookToolStripMenuItem";
             this.deleteBookToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.deleteBookToolStripMenuItem.Text = "Delete Book";
+            this.deleteBookToolStripMenuItem.Click += new System.EventHandler(this.deleteBookToolStripMenuItem_Click);
             // 
             // displayAllBooksToolStripMenuItem
             // 

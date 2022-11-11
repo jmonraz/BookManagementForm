@@ -13,6 +13,7 @@ namespace RegistrationForm
         public string mAge { get; private set; }
         public string mUserName {get;private set; }
         public string mPassword { get; private set; }
+
         public bool mUserExists = false;
 
         public static readonly List<User> mUsers = new List<User>();

@@ -36,7 +36,7 @@ namespace RegistrationForm
 
             if (Book.mBooks.Count == 0)
             {
-                MessageBox.Show("No books in library!");
+                MessageBox.Show("No books in library");
                 db.Close();
             }
             else
@@ -52,12 +52,26 @@ namespace RegistrationForm
             EditBook eb = new EditBook();
             if (Book.mBooks.Count == 0)
             {
-                MessageBox.Show("No books in library!");
+                MessageBox.Show("No books in library");
                 eb.Close();
             }
             else
             {
                 eb.ShowDialog();
+            }
+        }
+
+        private void deleteBookToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DeleteBookForm dbf = new DeleteBookForm();
+            if(Book.mBooks.Count == 0)
+            {
+                MessageBox.Show("No books in library");
+                dbf.Close();
+            }
+            else
+            {
+                dbf.ShowDialog();
             }
         }
     }

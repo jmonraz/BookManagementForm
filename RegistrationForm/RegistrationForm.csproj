@@ -59,6 +59,12 @@
     <Compile Include="BookListForm.Designer.cs">
       <DependentUpon>BookListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DeleteBookForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteBookForm.Designer.cs">
+      <DependentUpon>DeleteBookForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DisplayBooks.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BookListForm.resx">
       <DependentUpon>BookListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteBookForm.resx">
+      <DependentUpon>DeleteBookForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DisplayBooks.resx">
       <DependentUpon>DisplayBooks.cs</DependentUpon>

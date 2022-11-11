@@ -53,9 +53,9 @@ namespace RegistrationForm
             return book;
         }
         
-        public static void DeleteBook(Book _book)
+        public static void DeleteBook(int _index)
         {
-            mBooks.Remove(_book);
+            mBooks.RemoveAt(_index);
         }
         public static void EditBook(string _title,string _author, string _genre, string _pages, int _index)
         {
