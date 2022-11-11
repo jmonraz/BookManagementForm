@@ -46,5 +46,19 @@ namespace RegistrationForm
             
             
         }
+
+        private void editBookToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditBook eb = new EditBook();
+            if (Book.mBooks.Count == 0)
+            {
+                MessageBox.Show("No books in library!");
+                eb.Close();
+            }
+            else
+            {
+                eb.ShowDialog();
+            }
+        }
     }
 }
