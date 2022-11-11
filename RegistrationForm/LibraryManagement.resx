@@ -163,6 +163,13 @@
 		- Added Lookup button that displays all books in the list
 		- When list item is selected, member fields populate on the Edit Book Form textboxes
 		- Added button to close the form without selecting an item
-		- Added button to save selected item to a string accessible from Edit Book Form</value>
+		- Added button to save selected item to a string accessible from Edit Book Form
+- Added Delete Book Form
+	- Added textbox for title, author, genre, and pages in readonly mode
+	- Added a delete button to update the book.txt and list
+	- Added delete button functionality to disable when no book is selected
+	- Added text message to display text when a book is deleted
+	- Confirmation text box to confirm if a book should be deleted
+	- Added BookListForm</value>
   </data>
 </root>
