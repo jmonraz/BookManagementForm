@@ -14,6 +14,7 @@ namespace RegistrationForm
     {
         public LibraryManagementForm()
         {
+            FileFunctions.LoadBooks();
             InitializeComponent();
         }
 
@@ -22,6 +23,11 @@ namespace RegistrationForm
             Application.Exit();
         }
 
-        
+        private void addBookToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddBook ab = new AddBook();
+
+            ab.ShowDialog();
+        }
     }
 }

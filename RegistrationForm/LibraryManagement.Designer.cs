@@ -93,25 +93,26 @@
             // addBookToolStripMenuItem
             // 
             this.addBookToolStripMenuItem.Name = "addBookToolStripMenuItem";
-            this.addBookToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.addBookToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.addBookToolStripMenuItem.Text = "Add Book";
+            this.addBookToolStripMenuItem.Click += new System.EventHandler(this.addBookToolStripMenuItem_Click);
             // 
             // editBookToolStripMenuItem
             // 
             this.editBookToolStripMenuItem.Name = "editBookToolStripMenuItem";
-            this.editBookToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.editBookToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.editBookToolStripMenuItem.Text = "Edit Book";
             // 
             // deleteBookToolStripMenuItem
             // 
             this.deleteBookToolStripMenuItem.Name = "deleteBookToolStripMenuItem";
-            this.deleteBookToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.deleteBookToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.deleteBookToolStripMenuItem.Text = "Delete Book";
             // 
             // displayAllBooksToolStripMenuItem
             // 
             this.displayAllBooksToolStripMenuItem.Name = "displayAllBooksToolStripMenuItem";
-            this.displayAllBooksToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.displayAllBooksToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.displayAllBooksToolStripMenuItem.Text = "Display All Books";
             // 
             // searchToolStripMenuItem
@@ -244,7 +245,7 @@
             // 
             this.BookMangementSystemLabel.AutoSize = true;
             this.BookMangementSystemLabel.Font = new System.Drawing.Font("Century", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BookMangementSystemLabel.Location = new System.Drawing.Point(80, 82);
+            this.BookMangementSystemLabel.Location = new System.Drawing.Point(78, 67);
             this.BookMangementSystemLabel.Name = "BookMangementSystemLabel";
             this.BookMangementSystemLabel.Size = new System.Drawing.Size(362, 33);
             this.BookMangementSystemLabel.TabIndex = 1;
@@ -280,6 +281,7 @@
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.textBox1.Size = new System.Drawing.Size(432, 237);
             this.textBox1.TabIndex = 4;
+            this.textBox1.TabStop = false;
             this.textBox1.Text = resources.GetString("textBox1.Text");
             this.textBox1.WordWrap = false;
             // 
@@ -298,6 +300,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "LibraryManagementForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LibraryManagement";
             this.MainMenu.ResumeLayout(false);
             this.MainMenu.PerformLayout();
