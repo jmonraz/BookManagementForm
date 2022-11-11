@@ -117,4 +117,29 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="MainMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="textBox1.Text" xml:space="preserve">
+    <value>Updates:
+- Added Main Form buttons Register and Login
+- Added Register Form
+	- Functionality to write new user to a file and save credentials
+	- Functionality to identify if user has been created or not
+	- Added message box to existing user and nonexisting user case
+	- Functionality to close main form and open register form
+	- Added button to go back to main form
+- Added Login Form
+	- Functionality to identify if user is registered or not
+	- Added message box to existing user and nonexisting user case
+	- Functionality to read from register file and deduct if user exists
+	- Added message box "Welcome {user}" if authentication  succeeds
+	- Added button to go back to main form
+- Added Library Management Form
+	- Added toolstrip menu to display app functionalities
+	- Added textbox to display recent updates to app
+	- Added functionality to Exit button to exit application
+	- Added scrollbar to updates textbox
+	- User cannot edit updates textbox</value>
+  </data>
 </root>
