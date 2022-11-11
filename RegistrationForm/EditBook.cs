@@ -70,6 +70,7 @@ namespace RegistrationForm
                 mGenre = GenreTextbox.Text;
                 mPages = PagesTextbox.Text;
                 Book.EditBook(mTitle, mAuthor, mGenre, mPages, bookIndex);
+                FileFunctions.UpdateBooks();
                 MessageBox.Show("Book saved");
                 blf.Close();
                 this.Close();

@@ -133,5 +133,25 @@ namespace RegistrationForm
                 }
             }
         }
+
+        public static void UpdateBooks()
+        {
+            StreamWriter w = new StreamWriter(mBooksFile);
+
+            w.Flush();
+            w.Close();
+            
+            using (w = File.AppendText(mBooksFile))
+            {
+                foreach(Book book in Book.mBooks)
+                {
+                    w.WriteLine(book.mTitle);
+                    w.WriteLine(book.mAuthor);
+                    w.WriteLine(book.mGenre);
+                    w.WriteLine(book.mPages);
+                    w.WriteLine(book.mCurrentPage);
+                }
+            }
+        }
     }
 }
