@@ -37,6 +37,7 @@
             this.PasswordTextbox = new System.Windows.Forms.TextBox();
             this.PasswordLabel = new System.Windows.Forms.Label();
             this.SaveButton = new System.Windows.Forms.Button();
+            this.BackButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // NameLabel
@@ -121,12 +122,25 @@
             this.SaveButton.UseVisualStyleBackColor = true;
             this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
+            // BackButton
+            // 
+            this.BackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BackButton.Location = new System.Drawing.Point(2, 2);
+            this.BackButton.Name = "BackButton";
+            this.BackButton.Size = new System.Drawing.Size(44, 23);
+            this.BackButton.TabIndex = 9;
+            this.BackButton.Text = "BACK";
+            this.BackButton.UseVisualStyleBackColor = true;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
+            // 
             // MyRegistrationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(283, 293);
+            this.ControlBox = false;
+            this.Controls.Add(this.BackButton);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.PasswordTextbox);
             this.Controls.Add(this.PasswordLabel);
@@ -136,7 +150,10 @@
             this.Controls.Add(this.AgeLabel);
             this.Controls.Add(this.NameTextbox);
             this.Controls.Add(this.NameLabel);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "MyRegistrationForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registration";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -154,5 +171,6 @@
         private System.Windows.Forms.TextBox PasswordTextbox;
         private System.Windows.Forms.Label PasswordLabel;
         private System.Windows.Forms.Button SaveButton;
+        private System.Windows.Forms.Button BackButton;
     }
 }

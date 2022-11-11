@@ -60,6 +60,7 @@
             this.Controls.Add(this.LoginNavigationButton);
             this.Controls.Add(this.RegistrationNavigationButton);
             this.Name = "MyMainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
             this.ResumeLayout(false);
 

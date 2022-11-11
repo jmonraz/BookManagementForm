@@ -32,8 +32,10 @@ namespace RegistrationForm
 
         private void LoginNavigationButton_Click(object sender, EventArgs e)
         {
+            this.Hide();
             MyLoginForm loginForm = new MyLoginForm();
-            loginForm.Show();
+            loginForm.ShowDialog();
+            this.Close();
             
         }
     }
