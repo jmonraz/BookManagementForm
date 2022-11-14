@@ -16,6 +16,7 @@ namespace RegistrationForm
         {
             InitializeComponent();
             PopulateBooks();
+            this.BooksListbox.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.ListBox_DrawItem);
         }
 
         public void PopulateBooks()
@@ -46,6 +47,26 @@ namespace RegistrationForm
                 }
             }
 
+        }
+
+        private void ListBox_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            e.DrawBackground();
+            
+            Brush myBrush = Brushes.Black;
+
+            if(e.Index%2 == 0)
+            {
+                myBrush = Brushes.Red;
+            }
+            else
+            {
+                myBrush = Brushes.Green;
+            }
+
+           
+            e.Graphics.DrawString(((ListBox)sender).Items[e.Index].ToString(), e.Font, myBrush, e.Bounds, StringFormat.GenericDefault);
+            e.DrawFocusRectangle();
         }
     }
 }

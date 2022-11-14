@@ -42,6 +42,7 @@
             // BooksListbox
             // 
             this.BooksListbox.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.BooksListbox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.BooksListbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BooksListbox.ForeColor = System.Drawing.SystemColors.WindowText;
             this.BooksListbox.FormattingEnabled = true;
@@ -50,6 +51,7 @@
             this.BooksListbox.Name = "BooksListbox";
             this.BooksListbox.Size = new System.Drawing.Size(315, 346);
             this.BooksListbox.TabIndex = 0;
+            this.BooksListbox.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.ListBox_DrawItem);
             this.BooksListbox.SelectedIndexChanged += new System.EventHandler(this.BooksListbox_SelectedIndexChanged);
             // 
             // TitleTextbox

@@ -11,6 +11,7 @@ namespace RegistrationForm
     {
         static string mUsersFile = @".\users.txt";
         static string mBooksFile = @".\books.txt";
+        static string mReviewFile = @".\";
         
         public static void LoadUsers()
         {
@@ -132,6 +133,47 @@ namespace RegistrationForm
                     w.WriteLine(_book.mCurrentPage);
                 }
             }
+        }
+        public static void WriteReview(string _review, string _title)
+        {
+            string review = mReviewFile + _title + ".txt";
+            StreamWriter wr = new StreamWriter(review);
+            wr.Flush();
+            wr.Close();
+
+            using(StreamWriter w = File.AppendText(review))
+            {
+                    w.Write(_review);
+            }
+        }
+
+        public static string ReadReview(string _title)
+        {
+            string review = mReviewFile + _title + ".txt";
+
+            
+            string reviewString = string.Empty;
+            if(!File.Exists(review))
+            {
+                using(StreamWriter w = File.AppendText(review))
+                {
+                    w.Write("Type here...");
+                }
+            }
+            if(File.Exists(review))
+            {
+                StreamReader sr = new StreamReader(review);
+                string currLine;
+
+                while ((currLine = sr.ReadLine()) != null)
+                {
+                    reviewString += currLine;
+                }
+                sr.Close();
+            }
+
+            return reviewString;
+
         }
 
         public static void UpdateBooks()

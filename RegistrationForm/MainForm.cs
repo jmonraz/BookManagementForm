@@ -7,13 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Threading;
 
 namespace RegistrationForm
 {
     public partial class MyMainForm : Form
     {
-        Thread th;
+        
         public MyMainForm()
         {
             FileFunctions.LoadUsers();

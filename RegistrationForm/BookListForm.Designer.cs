@@ -62,6 +62,7 @@
             this.BookListbox.Name = "BookListbox";
             this.BookListbox.Size = new System.Drawing.Size(239, 259);
             this.BookListbox.TabIndex = 2;
+            this.BookListbox.DoubleClick += new System.EventHandler(this.OKButton_Click);
             // 
             // BookListForm
             // 

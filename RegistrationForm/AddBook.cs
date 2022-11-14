@@ -21,10 +21,21 @@ namespace RegistrationForm
         private void SaveButton_Click(object sender, EventArgs e)
         {
             Book book = Book.AddBook(TitleTextbox.Text, AuthorTextbox.Text, GenreTextbox.Text, PagesTextbox.Text, "1");
-
-            if(book.mBookExists)
+            if(TitleTextbox.Text.Length == 0 || TitleTextbox.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("No book title provided");
+                TitleTextbox.Clear();
+                AuthorTextbox.Clear();
+                GenreTextbox.Clear();
+                PagesTextbox.Clear();
+            }
+            else if(book.mBookExists)
             {
                 MessageBox.Show("Book already exsits");
+                TitleTextbox.Clear();
+                AuthorTextbox.Clear();
+                GenreTextbox.Clear();
+                PagesTextbox.Clear();
             }
             else if(!book.mBookExists)
             {

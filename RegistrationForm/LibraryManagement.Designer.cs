@@ -37,8 +37,6 @@
             this.displayAllBooksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.searchAuthorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.searchGenreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.progressToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.progressByBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reviewsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -93,37 +91,35 @@
             // addBookToolStripMenuItem
             // 
             this.addBookToolStripMenuItem.Name = "addBookToolStripMenuItem";
-            this.addBookToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addBookToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.addBookToolStripMenuItem.Text = "Add Book";
             this.addBookToolStripMenuItem.Click += new System.EventHandler(this.addBookToolStripMenuItem_Click);
             // 
             // editBookToolStripMenuItem
             // 
             this.editBookToolStripMenuItem.Name = "editBookToolStripMenuItem";
-            this.editBookToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editBookToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.editBookToolStripMenuItem.Text = "Edit Book";
             this.editBookToolStripMenuItem.Click += new System.EventHandler(this.editBookToolStripMenuItem_Click);
             // 
             // deleteBookToolStripMenuItem
             // 
             this.deleteBookToolStripMenuItem.Name = "deleteBookToolStripMenuItem";
-            this.deleteBookToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deleteBookToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.deleteBookToolStripMenuItem.Text = "Delete Book";
             this.deleteBookToolStripMenuItem.Click += new System.EventHandler(this.deleteBookToolStripMenuItem_Click);
             // 
             // displayAllBooksToolStripMenuItem
             // 
             this.displayAllBooksToolStripMenuItem.Name = "displayAllBooksToolStripMenuItem";
-            this.displayAllBooksToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.displayAllBooksToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.displayAllBooksToolStripMenuItem.Text = "Display All Books";
             this.displayAllBooksToolStripMenuItem.Click += new System.EventHandler(this.displayAllBooksToolStripMenuItem_Click);
             // 
             // searchToolStripMenuItem
             // 
             this.searchToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.searchToolStripMenuItem1,
-            this.searchAuthorToolStripMenuItem,
-            this.searchGenreToolStripMenuItem});
+            this.searchToolStripMenuItem1});
             this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
             this.searchToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
             this.searchToolStripMenuItem.Text = "Search";
@@ -131,20 +127,9 @@
             // searchToolStripMenuItem1
             // 
             this.searchToolStripMenuItem1.Name = "searchToolStripMenuItem1";
-            this.searchToolStripMenuItem1.Size = new System.Drawing.Size(149, 22);
+            this.searchToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.searchToolStripMenuItem1.Text = "Search Book";
-            // 
-            // searchAuthorToolStripMenuItem
-            // 
-            this.searchAuthorToolStripMenuItem.Name = "searchAuthorToolStripMenuItem";
-            this.searchAuthorToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
-            this.searchAuthorToolStripMenuItem.Text = "Search Author";
-            // 
-            // searchGenreToolStripMenuItem
-            // 
-            this.searchGenreToolStripMenuItem.Name = "searchGenreToolStripMenuItem";
-            this.searchGenreToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
-            this.searchGenreToolStripMenuItem.Text = "Search Genre";
+            this.searchToolStripMenuItem1.Click += new System.EventHandler(this.searchToolStripMenuItem1_Click);
             // 
             // progressToolStripMenuItem
             // 
@@ -171,8 +156,9 @@
             // writeReviewToolStripMenuItem
             // 
             this.writeReviewToolStripMenuItem.Name = "writeReviewToolStripMenuItem";
-            this.writeReviewToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.writeReviewToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.writeReviewToolStripMenuItem.Text = "Write Review";
+            this.writeReviewToolStripMenuItem.Click += new System.EventHandler(this.writeReviewToolStripMenuItem_Click);
             // 
             // favoritePhrasesToolStripMenuItem
             // 
@@ -326,8 +312,6 @@
         private System.Windows.Forms.ToolStripMenuItem deleteBookToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem displayAllBooksToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem searchToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem searchAuthorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem searchGenreToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem progressByBookToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem writeReviewToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addPhraseToolStripMenuItem;

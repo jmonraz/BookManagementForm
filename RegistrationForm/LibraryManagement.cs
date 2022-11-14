@@ -74,5 +74,17 @@ namespace RegistrationForm
                 dbf.ShowDialog();
             }
         }
+
+        private void searchToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            SearchForm sf = new SearchForm();
+            sf.ShowDialog();
+        }
+
+        private void writeReviewToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReviewForm rf = new ReviewForm();
+            rf.ShowDialog();
+        }
     }
 }
