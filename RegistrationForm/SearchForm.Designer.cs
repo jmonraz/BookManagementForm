@@ -50,6 +50,8 @@
             this.searchTextbox.Name = "searchTextbox";
             this.searchTextbox.Size = new System.Drawing.Size(257, 20);
             this.searchTextbox.TabIndex = 0;
+            this.searchTextbox.Text = "Search";
+            this.searchTextbox.Click += new System.EventHandler(this.searchTextbox_Click);
             this.searchTextbox.TextChanged += new System.EventHandler(this.searchTextbox_TextChanged);
             // 
             // booksListbox

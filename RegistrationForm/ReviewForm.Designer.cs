@@ -33,7 +33,6 @@
             this.booksListbox = new System.Windows.Forms.ListBox();
             this.searchTextbox = new System.Windows.Forms.TextBox();
             this.saveButton = new System.Windows.Forms.Button();
-            this.writeButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // BackButton
@@ -52,7 +51,7 @@
             this.reviewTextbox.Location = new System.Drawing.Point(295, 12);
             this.reviewTextbox.Multiline = true;
             this.reviewTextbox.Name = "reviewTextbox";
-            this.reviewTextbox.Size = new System.Drawing.Size(330, 361);
+            this.reviewTextbox.Size = new System.Drawing.Size(330, 372);
             this.reviewTextbox.TabIndex = 32;
             // 
             // booksListbox
@@ -60,7 +59,7 @@
             this.booksListbox.FormattingEnabled = true;
             this.booksListbox.Location = new System.Drawing.Point(12, 83);
             this.booksListbox.Name = "booksListbox";
-            this.booksListbox.Size = new System.Drawing.Size(257, 290);
+            this.booksListbox.Size = new System.Drawing.Size(257, 342);
             this.booksListbox.TabIndex = 34;
             this.booksListbox.SelectedIndexChanged += new System.EventHandler(this.booksListbox_SelectedIndexChanged);
             // 
@@ -70,6 +69,8 @@
             this.searchTextbox.Name = "searchTextbox";
             this.searchTextbox.Size = new System.Drawing.Size(257, 20);
             this.searchTextbox.TabIndex = 33;
+            this.searchTextbox.Text = "Search";
+            this.searchTextbox.Click += new System.EventHandler(this.searchTextbox_Click);
             this.searchTextbox.TextChanged += new System.EventHandler(this.searchTextbox_TextChanged);
             // 
             // saveButton
@@ -82,27 +83,19 @@
             this.saveButton.UseVisualStyleBackColor = true;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
-            // writeButton
-            // 
-            this.writeButton.Location = new System.Drawing.Point(38, 402);
-            this.writeButton.Name = "writeButton";
-            this.writeButton.Size = new System.Drawing.Size(191, 23);
-            this.writeButton.TabIndex = 36;
-            this.writeButton.Text = "Write";
-            this.writeButton.UseVisualStyleBackColor = true;
-            this.writeButton.Click += new System.EventHandler(this.writeButton_Click);
-            // 
             // ReviewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(637, 450);
-            this.Controls.Add(this.writeButton);
+            this.ControlBox = false;
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.booksListbox);
             this.Controls.Add(this.searchTextbox);
             this.Controls.Add(this.reviewTextbox);
             this.Controls.Add(this.BackButton);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ReviewForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReviewForm";
@@ -118,6 +111,5 @@
         private System.Windows.Forms.ListBox booksListbox;
         private System.Windows.Forms.TextBox searchTextbox;
         private System.Windows.Forms.Button saveButton;
-        private System.Windows.Forms.Button writeButton;
     }
 }

@@ -64,5 +64,9 @@ namespace RegistrationForm
             mBooks[_index].mGenre = _genre;
             mBooks[_index].mPages = _pages;
         }
+        public static void EditBook(string _currentPage, int _index)
+        {
+            mBooks[_index].mCurrentPage = _currentPage;
+        }
     }
 }

@@ -72,5 +72,10 @@ namespace RegistrationForm
                 }
             }
         }
+
+        private void searchTextbox_Click(object sender, EventArgs e)
+        {
+            searchTextbox.Clear();
+        }
     }
 }

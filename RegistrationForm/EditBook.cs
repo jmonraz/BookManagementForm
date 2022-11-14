@@ -40,6 +40,7 @@ namespace RegistrationForm
             GenreTextbox.Clear();
             PagesTextbox.Clear();
 
+            bookIndex = 0;
             foreach(Book book in Book.mBooks)
             {
                 if(blf.mTitle == book.mTitle)

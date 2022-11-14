@@ -142,8 +142,9 @@
             // progressByBookToolStripMenuItem
             // 
             this.progressByBookToolStripMenuItem.Name = "progressByBookToolStripMenuItem";
-            this.progressByBookToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.progressByBookToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.progressByBookToolStripMenuItem.Text = "Progress by Book";
+            this.progressByBookToolStripMenuItem.Click += new System.EventHandler(this.progressByBookToolStripMenuItem_Click);
             // 
             // reviewsToolStripMenuItem
             // 

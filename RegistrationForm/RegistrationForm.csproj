@@ -84,6 +84,12 @@
     <Compile Include="LibraryManagement.Designer.cs">
       <DependentUpon>LibraryManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProgressByBookForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgressByBookForm.Designer.cs">
+      <DependentUpon>ProgressByBookForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegistrationForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LibraryManagement.resx">
       <DependentUpon>LibraryManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgressByBookForm.resx">
+      <DependentUpon>ProgressByBookForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegistrationForm.resx">
       <DependentUpon>RegistrationForm.cs</DependentUpon>

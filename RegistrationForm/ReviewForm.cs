@@ -33,17 +33,12 @@ namespace RegistrationForm
 
         private void booksListbox_SelectedIndexChanged(object sender, EventArgs e)
         {
+
             if (booksListbox.SelectedIndex < 0)
                 return;
             
                 currTitle = booksListbox.SelectedItem.ToString();
-            
-           
-        }
-
-        private void writeButton_Click(object sender, EventArgs e)
-        {
-            if(currTitle != string.Empty)
+            if (currTitle != string.Empty)
             {
                 reviewString = FileFunctions.ReadReview(currTitle);
                 reviewTextbox.Text = reviewString;
@@ -51,19 +46,37 @@ namespace RegistrationForm
             else
             {
                 MessageBox.Show("No book selected");
-            } 
+            }
+
+        }
+
+        private void writeButton_Click(object sender, EventArgs e)
+        {
+            
         }
 
         private void saveButton_Click(object sender, EventArgs e)
         {
-            reviewString = reviewTextbox.Text;
-            FileFunctions.WriteReview(reviewString, currTitle);
-            MessageBox.Show("Review Saved");
+            if(reviewString != string.Empty)
+            {
+                reviewString = reviewTextbox.Text;
+                FileFunctions.WriteReview(reviewString, currTitle);
+                MessageBox.Show("Review Saved");
+            }
+            else
+            {
+                MessageBox.Show("No book selected");
+            }
         }
 
         private void BackButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void searchTextbox_Click(object sender, EventArgs e)
+        {
+            searchTextbox.Clear();
         }
     }
 }

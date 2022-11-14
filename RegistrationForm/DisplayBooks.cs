@@ -16,7 +16,8 @@ namespace RegistrationForm
         {
             InitializeComponent();
             PopulateBooks();
-            this.BooksListbox.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.ListBox_DrawItem);
+            // NOT FULLY IMPLEMENTED YET
+            //this.BooksListbox.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.ListBox_DrawItem);
         }
 
         public void PopulateBooks()
@@ -29,6 +30,7 @@ namespace RegistrationForm
 
         private void BooksListbox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (BooksListbox.SelectedIndex < 0) return;
             string currTitle = BooksListbox.SelectedItem.ToString();
 
             TitleTextbox.Clear();
@@ -49,24 +51,30 @@ namespace RegistrationForm
 
         }
 
-        private void ListBox_DrawItem(object sender, DrawItemEventArgs e)
+        private void BackButton_Click(object sender, EventArgs e)
         {
-            e.DrawBackground();
-            
-            Brush myBrush = Brushes.Black;
-
-            if(e.Index%2 == 0)
-            {
-                myBrush = Brushes.Red;
-            }
-            else
-            {
-                myBrush = Brushes.Green;
-            }
-
-           
-            e.Graphics.DrawString(((ListBox)sender).Items[e.Index].ToString(), e.Font, myBrush, e.Bounds, StringFormat.GenericDefault);
-            e.DrawFocusRectangle();
+            this.Close();
         }
+
+        //private void ListBox_DrawItem(object sender, DrawItemEventArgs e)
+        //{
+        //    // NOT FULLY IMPLEMENTED YET
+        //    //e.DrawBackground();
+
+        //    //Brush myBrush = Brushes.Black;
+
+        //    //if(e.Index%2 == 0)
+        //    //{
+        //    //    myBrush = Brushes.Red;
+        //    //}
+        //    //else
+        //    //{
+        //    //    myBrush = Brushes.Green;
+        //    //}
+
+
+        //    //e.Graphics.DrawString(((ListBox)sender).Items[e.Index].ToString(), e.Font, myBrush, e.Bounds, StringFormat.GenericDefault);
+        //    //e.DrawFocusRectangle();
+        //}
     }
 }

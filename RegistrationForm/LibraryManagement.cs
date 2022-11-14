@@ -86,5 +86,11 @@ namespace RegistrationForm
             ReviewForm rf = new ReviewForm();
             rf.ShowDialog();
         }
+
+        private void progressByBookToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ProgressByBookForm pbbf = new ProgressByBookForm();
+            pbbf.ShowDialog();
+        }
     }
 }

@@ -37,21 +37,20 @@
             this.AuthorLabel = new System.Windows.Forms.Label();
             this.GenreLabel = new System.Windows.Forms.Label();
             this.NumberOfPagesLabel = new System.Windows.Forms.Label();
+            this.BackButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // BooksListbox
             // 
             this.BooksListbox.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.BooksListbox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.BooksListbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BooksListbox.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.BooksListbox.ForeColor = System.Drawing.Color.Black;
             this.BooksListbox.FormattingEnabled = true;
             this.BooksListbox.ItemHeight = 18;
-            this.BooksListbox.Location = new System.Drawing.Point(26, 23);
+            this.BooksListbox.Location = new System.Drawing.Point(22, 48);
             this.BooksListbox.Name = "BooksListbox";
             this.BooksListbox.Size = new System.Drawing.Size(315, 346);
             this.BooksListbox.TabIndex = 0;
-            this.BooksListbox.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.ListBox_DrawItem);
             this.BooksListbox.SelectedIndexChanged += new System.EventHandler(this.BooksListbox_SelectedIndexChanged);
             // 
             // TitleTextbox
@@ -130,11 +129,24 @@
             this.NumberOfPagesLabel.TabIndex = 8;
             this.NumberOfPagesLabel.Text = "Number of Pages";
             // 
+            // BackButton
+            // 
+            this.BackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BackButton.Location = new System.Drawing.Point(22, 12);
+            this.BackButton.Name = "BackButton";
+            this.BackButton.Size = new System.Drawing.Size(46, 23);
+            this.BackButton.TabIndex = 19;
+            this.BackButton.Text = "BACK";
+            this.BackButton.UseVisualStyleBackColor = true;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
+            // 
             // DisplayBooks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(679, 420);
+            this.ControlBox = false;
+            this.Controls.Add(this.BackButton);
             this.Controls.Add(this.NumberOfPagesLabel);
             this.Controls.Add(this.GenreLabel);
             this.Controls.Add(this.AuthorLabel);
@@ -144,6 +156,8 @@
             this.Controls.Add(this.AuthorTextbox);
             this.Controls.Add(this.TitleTextbox);
             this.Controls.Add(this.BooksListbox);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "DisplayBooks";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DisplayBooks";
@@ -163,5 +177,6 @@
         private System.Windows.Forms.Label AuthorLabel;
         private System.Windows.Forms.Label GenreLabel;
         private System.Windows.Forms.Label NumberOfPagesLabel;
+        private System.Windows.Forms.Button BackButton;
     }
 }
