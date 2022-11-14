@@ -35,6 +35,7 @@ namespace RegistrationForm
 
         private void OKButton_Click(object sender, EventArgs e)
         {
+            if (BookListbox.SelectedIndex < 0) return;
             mTitle = BookListbox.SelectedItem.ToString();
             this.Close();
         }

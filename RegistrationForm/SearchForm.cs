@@ -54,6 +54,8 @@ namespace RegistrationForm
 
         private void booksListbox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (booksListbox.SelectedIndex < 0) return;
+
             string currTitle = booksListbox.SelectedItem.ToString();
 
             TitleTextbox.Clear();
