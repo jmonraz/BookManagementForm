@@ -90,6 +90,12 @@
     <Compile Include="LibraryManagement.Designer.cs">
       <DependentUpon>LibraryManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManageUsersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageUsersForm.Designer.cs">
+      <DependentUpon>ManageUsersForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProgressByBookForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +156,9 @@
     <EmbeddedResource Include="LibraryManagement.resx">
       <DependentUpon>LibraryManagement.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ManageUsersForm.resx">
+      <DependentUpon>ManageUsersForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ProgressByBookForm.resx">
       <DependentUpon>ProgressByBookForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -170,6 +179,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="ReviewForm.resx">
       <DependentUpon>ReviewForm.cs</DependentUpon>
@@ -189,6 +199,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bookicon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

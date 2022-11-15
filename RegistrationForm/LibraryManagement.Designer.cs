@@ -45,13 +45,12 @@
             this.addPhraseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.userInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.BookMangementSystemLabel = new System.Windows.Forms.Label();
             this.VersionLabel = new System.Windows.Forms.Label();
             this.AuthorLabel = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.updateToolstrip = new System.Windows.Forms.ToolStripMenuItem();
             this.MainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,10 +66,11 @@
             this.reviewsToolStripMenuItem,
             this.favoritePhrasesToolStripMenuItem,
             this.usersToolStripMenuItem,
+            this.updateToolstrip,
             this.exitToolStripMenuItem});
             this.MainMenu.Location = new System.Drawing.Point(0, 0);
             this.MainMenu.Name = "MainMenu";
-            this.MainMenu.Size = new System.Drawing.Size(521, 24);
+            this.MainMenu.Size = new System.Drawing.Size(562, 24);
             this.MainMenu.TabIndex = 0;
             this.MainMenu.Text = "MainMenu";
             // 
@@ -124,7 +124,7 @@
             // searchToolStripMenuItem1
             // 
             this.searchToolStripMenuItem1.Name = "searchToolStripMenuItem1";
-            this.searchToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.searchToolStripMenuItem1.Size = new System.Drawing.Size(139, 22);
             this.searchToolStripMenuItem1.Text = "Search Book";
             this.searchToolStripMenuItem1.Click += new System.EventHandler(this.searchToolStripMenuItem1_Click);
             // 
@@ -139,7 +139,7 @@
             // progressByBookToolStripMenuItem
             // 
             this.progressByBookToolStripMenuItem.Name = "progressByBookToolStripMenuItem";
-            this.progressByBookToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.progressByBookToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.progressByBookToolStripMenuItem.Text = "Progress by Book";
             this.progressByBookToolStripMenuItem.Click += new System.EventHandler(this.progressByBookToolStripMenuItem_Click);
             // 
@@ -154,7 +154,7 @@
             // writeReviewToolStripMenuItem
             // 
             this.writeReviewToolStripMenuItem.Name = "writeReviewToolStripMenuItem";
-            this.writeReviewToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.writeReviewToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.writeReviewToolStripMenuItem.Text = "Write Review";
             this.writeReviewToolStripMenuItem.Click += new System.EventHandler(this.writeReviewToolStripMenuItem_Click);
             // 
@@ -169,16 +169,14 @@
             // addPhraseToolStripMenuItem
             // 
             this.addPhraseToolStripMenuItem.Name = "addPhraseToolStripMenuItem";
-            this.addPhraseToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.addPhraseToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.addPhraseToolStripMenuItem.Text = "Add Phrase";
             this.addPhraseToolStripMenuItem.Click += new System.EventHandler(this.addPhraseToolStripMenuItem_Click);
             // 
             // usersToolStripMenuItem
             // 
             this.usersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.manageUsersToolStripMenuItem,
-            this.userInformationToolStripMenuItem,
-            this.changePasswordToolStripMenuItem});
+            this.manageUsersToolStripMenuItem});
             this.usersToolStripMenuItem.Name = "usersToolStripMenuItem";
             this.usersToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
             this.usersToolStripMenuItem.Text = "Users";
@@ -186,25 +184,17 @@
             // manageUsersToolStripMenuItem
             // 
             this.manageUsersToolStripMenuItem.Name = "manageUsersToolStripMenuItem";
-            this.manageUsersToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.manageUsersToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.manageUsersToolStripMenuItem.Text = "Manage Users";
-            // 
-            // userInformationToolStripMenuItem
-            // 
-            this.userInformationToolStripMenuItem.Name = "userInformationToolStripMenuItem";
-            this.userInformationToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
-            this.userInformationToolStripMenuItem.Text = "User Information";
-            // 
-            // changePasswordToolStripMenuItem
-            // 
-            this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
-            this.changePasswordToolStripMenuItem.Text = "Change Password";
+            this.manageUsersToolStripMenuItem.Click += new System.EventHandler(this.manageUsersToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
+            this.exitToolStripMenuItem.BackColor = System.Drawing.Color.IndianRed;
+            this.exitToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -212,7 +202,7 @@
             // 
             this.BookMangementSystemLabel.AutoSize = true;
             this.BookMangementSystemLabel.Font = new System.Drawing.Font("Century", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BookMangementSystemLabel.Location = new System.Drawing.Point(78, 67);
+            this.BookMangementSystemLabel.Location = new System.Drawing.Point(91, 68);
             this.BookMangementSystemLabel.Name = "BookMangementSystemLabel";
             this.BookMangementSystemLabel.Size = new System.Drawing.Size(362, 33);
             this.BookMangementSystemLabel.TabIndex = 1;
@@ -221,7 +211,7 @@
             // VersionLabel
             // 
             this.VersionLabel.AutoSize = true;
-            this.VersionLabel.Location = new System.Drawing.Point(211, 400);
+            this.VersionLabel.Location = new System.Drawing.Point(238, 397);
             this.VersionLabel.Name = "VersionLabel";
             this.VersionLabel.Size = new System.Drawing.Size(78, 13);
             this.VersionLabel.TabIndex = 2;
@@ -230,7 +220,7 @@
             // AuthorLabel
             // 
             this.AuthorLabel.AutoSize = true;
-            this.AuthorLabel.Location = new System.Drawing.Point(196, 427);
+            this.AuthorLabel.Location = new System.Drawing.Point(223, 424);
             this.AuthorLabel.Name = "AuthorLabel";
             this.AuthorLabel.Size = new System.Drawing.Size(108, 13);
             this.AuthorLabel.TabIndex = 3;
@@ -246,23 +236,31 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox1.Size = new System.Drawing.Size(432, 237);
+            this.textBox1.Size = new System.Drawing.Size(460, 237);
             this.textBox1.TabIndex = 4;
             this.textBox1.TabStop = false;
             this.textBox1.Text = resources.GetString("textBox1.Text");
             this.textBox1.WordWrap = false;
             // 
+            // updateToolstrip
+            // 
+            this.updateToolstrip.Name = "updateToolstrip";
+            this.updateToolstrip.Size = new System.Drawing.Size(62, 20);
+            this.updateToolstrip.Text = "Updates";
+            this.updateToolstrip.Click += new System.EventHandler(this.updateToolstrip_Click);
+            // 
             // LibraryManagementForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(521, 471);
+            this.ClientSize = new System.Drawing.Size(562, 471);
             this.ControlBox = false;
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.AuthorLabel);
             this.Controls.Add(this.VersionLabel);
             this.Controls.Add(this.BookMangementSystemLabel);
             this.Controls.Add(this.MainMenu);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.MainMenu;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -294,11 +292,10 @@
         private System.Windows.Forms.ToolStripMenuItem writeReviewToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addPhraseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manageUsersToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem userInformationToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
         private System.Windows.Forms.Label BookMangementSystemLabel;
         private System.Windows.Forms.Label VersionLabel;
         private System.Windows.Forms.Label AuthorLabel;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ToolStripMenuItem updateToolstrip;
     }
 }
