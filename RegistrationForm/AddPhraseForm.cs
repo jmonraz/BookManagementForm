@@ -44,6 +44,7 @@ namespace RegistrationForm
         private void LookupButton_Click(object sender, EventArgs e)
         {
             blf.ShowDialog();
+            saveButton.Enabled = true;
             LoadBook();
         }
 
@@ -52,6 +53,7 @@ namespace RegistrationForm
             addButton.Enabled = true;
             deleteButton.Enabled = true;
             
+
             TitleTextbox.Clear();
 
             mBookIndex = 0;
@@ -62,6 +64,7 @@ namespace RegistrationForm
                     TitleTextbox.Text = book.mTitle;
                     mTitle = book.mTitle;
                     mBookEmpty = false;
+
                     break;
                 }
                 mBookIndex++;
@@ -80,6 +83,7 @@ namespace RegistrationForm
 
         private void deleteButton_Click(object sender, EventArgs e)
         {
+            if (mBookEmpty) return;
             phraseTextbook.Clear();
             pageTextbox.Clear();
             List<string> newPhrases = new List<string>();
@@ -117,10 +121,22 @@ namespace RegistrationForm
 
         private void saveButton_Click(object sender, EventArgs e)
         {
-            if(mBookEmpty)
+            if (mBookEmpty)
             {
                 saveButton.Enabled = false;
+                return;
             }
+            if (phraseTextbook.Text.Trim() == "")
+            {
+                MessageBox.Show("No phrase inputted");
+                return;
+            }
+            if(pageTextbox.Text.Trim() == "")
+            {
+                MessageBox.Show("No page inputted");
+                return;
+            }
+            
             else
             {
                 
@@ -131,6 +147,8 @@ namespace RegistrationForm
 
                 FileFunctions.WritePhrase(mTitle, phrases);
                 MessageBox.Show("Saved");
+                phraseTextbook.Clear();
+                pageTextbox.Clear();
             }
 
             LoadBook();
