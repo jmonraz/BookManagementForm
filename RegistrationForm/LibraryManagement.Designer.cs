@@ -43,9 +43,6 @@
             this.writeReviewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.favoritePhrasesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addPhraseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editPhraseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deletePhraseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewPhrasesByBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.userInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -164,10 +161,7 @@
             // favoritePhrasesToolStripMenuItem
             // 
             this.favoritePhrasesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addPhraseToolStripMenuItem,
-            this.editPhraseToolStripMenuItem,
-            this.deletePhraseToolStripMenuItem,
-            this.viewPhrasesByBookToolStripMenuItem});
+            this.addPhraseToolStripMenuItem});
             this.favoritePhrasesToolStripMenuItem.Name = "favoritePhrasesToolStripMenuItem";
             this.favoritePhrasesToolStripMenuItem.Size = new System.Drawing.Size(104, 20);
             this.favoritePhrasesToolStripMenuItem.Text = "Favorite Phrases";
@@ -177,24 +171,7 @@
             this.addPhraseToolStripMenuItem.Name = "addPhraseToolStripMenuItem";
             this.addPhraseToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.addPhraseToolStripMenuItem.Text = "Add Phrase";
-            // 
-            // editPhraseToolStripMenuItem
-            // 
-            this.editPhraseToolStripMenuItem.Name = "editPhraseToolStripMenuItem";
-            this.editPhraseToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
-            this.editPhraseToolStripMenuItem.Text = "Edit Phrase";
-            // 
-            // deletePhraseToolStripMenuItem
-            // 
-            this.deletePhraseToolStripMenuItem.Name = "deletePhraseToolStripMenuItem";
-            this.deletePhraseToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
-            this.deletePhraseToolStripMenuItem.Text = "Delete Phrase";
-            // 
-            // viewPhrasesByBookToolStripMenuItem
-            // 
-            this.viewPhrasesByBookToolStripMenuItem.Name = "viewPhrasesByBookToolStripMenuItem";
-            this.viewPhrasesByBookToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
-            this.viewPhrasesByBookToolStripMenuItem.Text = "View Phrases by Book";
+            this.addPhraseToolStripMenuItem.Click += new System.EventHandler(this.addPhraseToolStripMenuItem_Click);
             // 
             // usersToolStripMenuItem
             // 
@@ -316,9 +293,6 @@
         private System.Windows.Forms.ToolStripMenuItem progressByBookToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem writeReviewToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addPhraseToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editPhraseToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem deletePhraseToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viewPhrasesByBookToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manageUsersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem userInformationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;

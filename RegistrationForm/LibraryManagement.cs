@@ -92,5 +92,11 @@ namespace RegistrationForm
             ProgressByBookForm pbbf = new ProgressByBookForm();
             pbbf.ShowDialog();
         }
+
+        private void addPhraseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddPhraseForm apf = new AddPhraseForm();
+            apf.ShowDialog();
+        }
     }
 }

@@ -12,6 +12,7 @@ namespace RegistrationForm
         static string mUsersFile = @".\users.txt";
         static string mBooksFile = @".\books.txt";
         static string mReviewFile = @".\";
+        static string mPhrases = @".\";
         
         public static void LoadUsers()
         {
@@ -194,6 +195,57 @@ namespace RegistrationForm
                     w.WriteLine(book.mCurrentPage);
                 }
             }
+        }
+
+        public static void WritePhrase( string _title, List<string> _phrase)
+        {
+            List<string> page = new List<string>();
+            List<string> phrase = new List<string>();
+
+            for(int i = 0; i < _phrase.Count; i++)
+            {
+                page.Add(_phrase[i]);
+                i++;
+                phrase.Add(_phrase[i]);
+            }
+            
+            string phraseString = mReviewFile + _title + "phrases.txt";
+            StreamWriter wr = new StreamWriter(phraseString);
+            wr.Flush();
+            wr.Close();
+
+            using (StreamWriter w = File.AppendText(phraseString))
+            {
+                for(int i = 0; i <phrase.Count; i++)
+                {
+                    w.WriteLine(page[i]);
+                    w.WriteLine(phrase[i]);
+                }
+            }
+        }
+
+        public static List<string> ReadPhrase(string _title)
+        {
+            string phrasesString = mReviewFile + _title + "phrases.txt";
+
+
+            List<string> phrases = new List<string>();
+            
+            
+            if (File.Exists(phrasesString))
+            {
+                StreamReader sr = new StreamReader(phrasesString);
+                string currLine;
+
+                while ((currLine = sr.ReadLine()) != null)
+                {
+                    phrases.Add(currLine);
+                }
+                sr.Close();
+            }
+
+            return phrases;
+
         }
     }
 }
